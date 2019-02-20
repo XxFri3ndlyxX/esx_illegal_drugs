@@ -15,7 +15,13 @@ Add this in your server.cfg:
 
 Keybind is C on keyboard or R3 on controller.   
 
-**TODO* Adding animation**          
+**TODO* Adding animation**     
+
+**Screenshot**  
+<a href="https://imgur.com/hb3yEjZ"><img src="https://i.imgur.com/hb3yEjZ.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/kGKoSZS"><img src="https://i.imgur.com/kGKoSZS.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/NL90eRb"><img src="https://i.imgur.com/NL90eRb.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/AJ35TBN"><img src="https://i.imgur.com/AJ35TBN.jpg" title="source: imgur.com" /></a>
 Legal
 License
 
