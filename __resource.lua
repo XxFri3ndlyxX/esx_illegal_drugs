@@ -1,4 +1,4 @@
-description 'esx_drugs'
+description 'esx_illegal_drugs'
 
 version '1.0.0'
 
