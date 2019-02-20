@@ -1,3 +1,5 @@
+USE `essentialmode`;
+
 INSERT INTO `items` (name, label) VALUES
 	('weed', 'Weed (1G)'),
 	('weed_pooch', 'Bag of weed (28G)'),
