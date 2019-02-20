@@ -67,8 +67,8 @@ local function HarvestWeed(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startHarvestWeed')
-AddEventHandler('esx_drugs:startHarvestWeed', function()
+RegisterServerEvent('esx_illegal_drugs:startHarvestWeed')
+AddEventHandler('esx_illegal_drugs:startHarvestWeed', function()
 
 	local _source = source
 
@@ -80,8 +80,8 @@ AddEventHandler('esx_drugs:startHarvestWeed', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopHarvestWeed')
-AddEventHandler('esx_drugs:stopHarvestWeed', function()
+RegisterServerEvent('esx_illegal_drugs:stopHarvestWeed')
+AddEventHandler('esx_illegal_drugs:stopHarvestWeed', function()
 
 	local _source = source
 
@@ -120,8 +120,8 @@ local function TransformWeed(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startTransformWeed')
-AddEventHandler('esx_drugs:startTransformWeed', function()
+RegisterServerEvent('esx_illegal_drugs:startTransformWeed')
+AddEventHandler('esx_illegal_drugs:startTransformWeed', function()
 
 	local _source = source
 
@@ -133,8 +133,8 @@ AddEventHandler('esx_drugs:startTransformWeed', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopTransformWeed')
-AddEventHandler('esx_drugs:stopTransformWeed', function()
+RegisterServerEvent('esx_illegal_drugs:stopTransformWeed')
+AddEventHandler('esx_illegal_drugs:stopTransformWeed', function()
 
 	local _source = source
 
@@ -188,8 +188,8 @@ local function SellWeed(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startSellWeed')
-AddEventHandler('esx_drugs:startSellWeed', function()
+RegisterServerEvent('esx_illegal_drugs:startSellWeed')
+AddEventHandler('esx_illegal_drugs:startSellWeed', function()
 
 	local _source = source
 
@@ -201,8 +201,8 @@ AddEventHandler('esx_drugs:startSellWeed', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopSellWeed')
-AddEventHandler('esx_drugs:stopSellWeed', function()
+RegisterServerEvent('esx_illegal_drugs:stopSellWeed')
+AddEventHandler('esx_illegal_drugs:stopSellWeed', function()
 
 	local _source = source
 
@@ -249,8 +249,8 @@ local function HarvestOpium(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startHarvestOpium')
-AddEventHandler('esx_drugs:startHarvestOpium', function()
+RegisterServerEvent('esx_illegal_drugs:startHarvestOpium')
+AddEventHandler('esx_illegal_drugs:startHarvestOpium', function()
 
 	local _source = source
 
@@ -262,8 +262,8 @@ AddEventHandler('esx_drugs:startHarvestOpium', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopHarvestOpium')
-AddEventHandler('esx_drugs:stopHarvestOpium', function()
+RegisterServerEvent('esx_illegal_drugs:stopHarvestOpium')
+AddEventHandler('esx_illegal_drugs:stopHarvestOpium', function()
 
 	local _source = source
 
@@ -302,8 +302,8 @@ local function TransformOpium(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startTransformOpium')
-AddEventHandler('esx_drugs:startTransformOpium', function()
+RegisterServerEvent('esx_illegal_drugs:startTransformOpium')
+AddEventHandler('esx_illegal_drugs:startTransformOpium', function()
 
 	local _source = source
 
@@ -315,8 +315,8 @@ AddEventHandler('esx_drugs:startTransformOpium', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopTransformOpium')
-AddEventHandler('esx_drugs:stopTransformOpium', function()
+RegisterServerEvent('esx_illegal_drugs:stopTransformOpium')
+AddEventHandler('esx_illegal_drugs:stopTransformOpium', function()
 
 	local _source = source
 
@@ -370,8 +370,8 @@ local function SellOpium(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startSellOpium')
-AddEventHandler('esx_drugs:startSellOpium', function()
+RegisterServerEvent('esx_illegal_drugs:startSellOpium')
+AddEventHandler('esx_illegal_drugs:startSellOpium', function()
 
 	local _source = source
 
@@ -383,8 +383,8 @@ AddEventHandler('esx_drugs:startSellOpium', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopSellOpium')
-AddEventHandler('esx_drugs:stopSellOpium', function()
+RegisterServerEvent('esx_illegal_drugs:stopSellOpium')
+AddEventHandler('esx_illegal_drugs:stopSellOpium', function()
 
 	local _source = source
 
@@ -430,8 +430,8 @@ local function HarvestCoke(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startHarvestCoke')
-AddEventHandler('esx_drugs:startHarvestCoke', function()
+RegisterServerEvent('esx_illegal_drugs:startHarvestCoke')
+AddEventHandler('esx_illegal_drugs:startHarvestCoke', function()
 
 	local _source = source
 
@@ -443,8 +443,8 @@ AddEventHandler('esx_drugs:startHarvestCoke', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopHarvestCoke')
-AddEventHandler('esx_drugs:stopHarvestCoke', function()
+RegisterServerEvent('esx_illegal_drugs:stopHarvestCoke')
+AddEventHandler('esx_illegal_drugs:stopHarvestCoke', function()
 
 	local _source = source
 
@@ -483,8 +483,8 @@ local function TransformCoke(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startTransformCoke')
-AddEventHandler('esx_drugs:startTransformCoke', function()
+RegisterServerEvent('esx_illegal_drugs:startTransformCoke')
+AddEventHandler('esx_illegal_drugs:startTransformCoke', function()
 
 	local _source = source
 
@@ -496,8 +496,8 @@ AddEventHandler('esx_drugs:startTransformCoke', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopTransformCoke')
-AddEventHandler('esx_drugs:stopTransformCoke', function()
+RegisterServerEvent('esx_illegal_drugs:stopTransformCoke')
+AddEventHandler('esx_illegal_drugs:stopTransformCoke', function()
 
 	local _source = source
 
@@ -551,8 +551,8 @@ local function SellCoke(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startSellCoke')
-AddEventHandler('esx_drugs:startSellCoke', function()
+RegisterServerEvent('esx_illegal_drugs:startSellCoke')
+AddEventHandler('esx_illegal_drugs:startSellCoke', function()
 
 	local _source = source
 
@@ -564,8 +564,8 @@ AddEventHandler('esx_drugs:startSellCoke', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopSellCoke')
-AddEventHandler('esx_drugs:stopSellCoke', function()
+RegisterServerEvent('esx_illegal_drugs:stopSellCoke')
+AddEventHandler('esx_illegal_drugs:stopSellCoke', function()
 
 	local _source = source
 
@@ -611,8 +611,8 @@ local function HarvestMeth(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startHarvestMeth')
-AddEventHandler('esx_drugs:startHarvestMeth', function()
+RegisterServerEvent('esx_illegal_drugs:startHarvestMeth')
+AddEventHandler('esx_illegal_drugs:startHarvestMeth', function()
 
 	local _source = source
 
@@ -624,8 +624,8 @@ AddEventHandler('esx_drugs:startHarvestMeth', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopHarvestMeth')
-AddEventHandler('esx_drugs:stopHarvestMeth', function()
+RegisterServerEvent('esx_illegal_drugs:stopHarvestMeth')
+AddEventHandler('esx_illegal_drugs:stopHarvestMeth', function()
 
 	local _source = source
 
@@ -664,8 +664,8 @@ local function TransformMeth(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startTransformMeth')
-AddEventHandler('esx_drugs:startTransformMeth', function()
+RegisterServerEvent('esx_illegal_drugs:startTransformMeth')
+AddEventHandler('esx_illegal_drugs:startTransformMeth', function()
 
 	local _source = source
 
@@ -677,8 +677,8 @@ AddEventHandler('esx_drugs:startTransformMeth', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopTransformMeth')
-AddEventHandler('esx_drugs:stopTransformMeth', function()
+RegisterServerEvent('esx_illegal_drugs:stopTransformMeth')
+AddEventHandler('esx_illegal_drugs:stopTransformMeth', function()
 
 	local _source = source
 
@@ -732,8 +732,8 @@ local function SellMeth(source)
 	end)
 end
 
-RegisterServerEvent('esx_drugs:startSellMeth')
-AddEventHandler('esx_drugs:startSellMeth', function()
+RegisterServerEvent('esx_illegal_drugs:startSellMeth')
+AddEventHandler('esx_illegal_drugs:startSellMeth', function()
 
 	local _source = source
 
@@ -745,8 +745,8 @@ AddEventHandler('esx_drugs:startSellMeth', function()
 
 end)
 
-RegisterServerEvent('esx_drugs:stopSellMeth')
-AddEventHandler('esx_drugs:stopSellMeth', function()
+RegisterServerEvent('esx_illegal_drugs:stopSellMeth')
+AddEventHandler('esx_illegal_drugs:stopSellMeth', function()
 
 	local _source = source
 
@@ -762,11 +762,11 @@ end)
 
 
 -- RETURN INVENTORY TO CLIENT
-RegisterServerEvent('esx_drugs:GetUserInventory')
-AddEventHandler('esx_drugs:GetUserInventory', function(currentZone)
+RegisterServerEvent('esx_illegal_drugs:GetUserInventory')
+AddEventHandler('esx_illegal_drugs:GetUserInventory', function(currentZone)
 	local _source = source
     local xPlayer  = ESX.GetPlayerFromId(_source)
-    TriggerClientEvent('esx_drugs:ReturnInventory', 
+    TriggerClientEvent('esx_illegal_drugs:ReturnInventory', 
     	_source, 
     	xPlayer.getInventoryItem('coke').count, 
 		xPlayer.getInventoryItem('coke_pooch').count,
@@ -789,7 +789,7 @@ ESX.RegisterUsableItem('weed', function(source)
 
 	xPlayer.removeInventoryItem('weed', 1)
 
-	TriggerClientEvent('esx_drugs:onPot', _source)
+	TriggerClientEvent('esx_illegal_drugs:onPot', _source)
     TriggerClientEvent('esx:showNotification', _source, _U('used_one_weed'))
 
 end)
