@@ -5,7 +5,7 @@ This is why this is not a fork.
 
 **REQUIREMENTS**
 This version is modified to use [FiveMIPL](https://github.com/XxFri3ndlyxX/fivem-ipl)  
-You will also need [FiveMIPL](https://github.com/XxFri3ndlyxX/Teleport)  
+You will also need [Teleport Script](https://github.com/XxFri3ndlyxX/Teleport)  
 You must use some tp scripts. Coord will be made available.  
 
 **Installation**  
