@@ -9,8 +9,11 @@ You must use some tp scripts. Coord will be made available.
 **Installation**  
 Import esx_drugs.sql in your database  
 Add this in your server.cfg:  
-```start esx_drugs```   
+```start esx_illegal_drugs```   
 
+Keybind is C on keyboard or R3 on controller.   
+
+**TODO* Adding animation**          
 Legal
 License
 
