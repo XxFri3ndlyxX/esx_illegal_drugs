@@ -38,7 +38,7 @@ Citizen.CreateThread(function()
     end
 end)
 
-AddEventHandler('esx_drugs:hasEnteredMarker', function(zone)
+AddEventHandler('esx_illegal_drugs:hasEnteredMarker', function(zone)
 
         ESX.UI.Menu.CloseAll()
 
@@ -159,28 +159,28 @@ AddEventHandler('esx_drugs:hasEnteredMarker', function(zone)
         end
 end)
 
-AddEventHandler('esx_drugs:hasExitedMarker', function(zone)
+AddEventHandler('esx_illegal_drugs:hasExitedMarker', function(zone)
 
         CurrentAction = nil
         ESX.UI.Menu.CloseAll()
 
-        TriggerServerEvent('esx_drugs:stopHarvestCoke')
-        TriggerServerEvent('esx_drugs:stopTransformCoke')
-        TriggerServerEvent('esx_drugs:stopSellCoke')
-        TriggerServerEvent('esx_drugs:stopHarvestMeth')
-        TriggerServerEvent('esx_drugs:stopTransformMeth')
-        TriggerServerEvent('esx_drugs:stopSellMeth')
-        TriggerServerEvent('esx_drugs:stopHarvestWeed')
-        TriggerServerEvent('esx_drugs:stopTransformWeed')
-        TriggerServerEvent('esx_drugs:stopSellWeed')
-        TriggerServerEvent('esx_drugs:stopHarvestOpium')
-        TriggerServerEvent('esx_drugs:stopTransformOpium')
-        TriggerServerEvent('esx_drugs:stopSellOpium')
+        TriggerServerEvent('esx_illegal_drugs:stopHarvestCoke')
+        TriggerServerEvent('esx_illegal_drugs:stopTransformCoke')
+        TriggerServerEvent('esx_illegal_drugs:stopSellCoke')
+        TriggerServerEvent('esx_illegal_drugs:stopHarvestMeth')
+        TriggerServerEvent('esx_illegal_drugs:stopTransformMeth')
+        TriggerServerEvent('esx_illegal_drugs:stopSellMeth')
+        TriggerServerEvent('esx_illegal_drugs:stopHarvestWeed')
+        TriggerServerEvent('esx_illegal_drugs:stopTransformWeed')
+        TriggerServerEvent('esx_illegal_drugs:stopSellWeed')
+        TriggerServerEvent('esx_illegal_drugs:stopHarvestOpium')
+        TriggerServerEvent('esx_illegal_drugs:stopTransformOpium')
+        TriggerServerEvent('esx_illegal_drugs:stopSellOpium')
 end)
 
 -- Weed Effect
-RegisterNetEvent('esx_drugs:onPot')
-AddEventHandler('esx_drugs:onPot', function()
+RegisterNetEvent('esx_illegal_drugs:onPot')
+AddEventHandler('esx_illegal_drugs:onPot', function()
     RequestAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
     while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") do
         Citizen.Wait(0)
@@ -243,8 +243,8 @@ Citizen.CreateThread(function()
 end)
 
 -- RETURN NUMBER OF ITEMS FROM SERVER
-RegisterNetEvent('esx_drugs:ReturnInventory')
-AddEventHandler('esx_drugs:ReturnInventory', function(cokeNbr, cokepNbr, methNbr, methpNbr, weedNbr, weedpNbr, opiumNbr, opiumpNbr, jobName, currentZone)
+RegisterNetEvent('esx_illegal_drugs:ReturnInventory')
+AddEventHandler('esx_illegal_drugs:ReturnInventory', function(cokeNbr, cokepNbr, methNbr, methpNbr, weedNbr, weedpNbr, opiumNbr, opiumpNbr, jobName, currentZone)
     cokeQTE       = cokeNbr
     coke_poochQTE = cokepNbr
     methQTE 	  = methNbr
@@ -254,7 +254,7 @@ AddEventHandler('esx_drugs:ReturnInventory', function(cokeNbr, cokepNbr, methNbr
     opiumQTE       = opiumNbr
     opium_poochQTE = opiumpNbr
     myJob         = jobName
-    TriggerEvent('esx_drugs:hasEnteredMarker', currentZone)
+    TriggerEvent('esx_illegal_drugs:hasEnteredMarker', currentZone)
 end)
 
 -- Activate menu when player is inside marker
@@ -277,12 +277,12 @@ Citizen.CreateThread(function()
         if isInMarker and not hasAlreadyEnteredMarker then
             hasAlreadyEnteredMarker = true
             lastZone                = currentZone
-            TriggerServerEvent('esx_drugs:GetUserInventory', currentZone)
+            TriggerServerEvent('esx_illegal_drugs:GetUserInventory', currentZone)
         end
 
         if not isInMarker and hasAlreadyEnteredMarker then
             hasAlreadyEnteredMarker = false
-            TriggerEvent('esx_drugs:hasExitedMarker', lastZone)
+            TriggerEvent('esx_illegal_drugs:hasExitedMarker', lastZone)
         end
 
     end
@@ -298,40 +298,40 @@ Citizen.CreateThread(function()
             DisplayHelpTextFromStringLabel(0, 0, 1, -1)
             if IsControlJustReleased(0, 26) then
                 if CurrentAction == 'coke_harvest' then
-                    TriggerServerEvent('esx_drugs:startHarvestCoke')
+                    TriggerServerEvent('esx_illegal_drugs:startHarvestCoke')
                 end
                 if CurrentAction == 'coke_treatment' then
-                    TriggerServerEvent('esx_drugs:startTransformCoke')
+                    TriggerServerEvent('esx_illegal_drugs:startTransformCoke')
                 end
                 if CurrentAction == 'coke_resell' then
-                    TriggerServerEvent('esx_drugs:startSellCoke')
+                    TriggerServerEvent('esx_illegal_drugs:startSellCoke')
                 end
                 if CurrentAction == 'meth_harvest' then
-                    TriggerServerEvent('esx_drugs:startHarvestMeth')
+                    TriggerServerEvent('esx_illegal_drugs:startHarvestMeth')
                 end
                 if CurrentAction == 'meth_treatment' then
-                    TriggerServerEvent('esx_drugs:startTransformMeth')
+                    TriggerServerEvent('esx_illegal_drugs:startTransformMeth')
                 end
                 if CurrentAction == 'meth_resell' then
-                    TriggerServerEvent('esx_drugs:startSellMeth')
+                    TriggerServerEvent('esx_illegal_drugs:startSellMeth')
                 end
                 if CurrentAction == 'weed_harvest' then
-                    TriggerServerEvent('esx_drugs:startHarvestWeed')
+                    TriggerServerEvent('esx_illegal_drugs:startHarvestWeed')
                 end
                 if CurrentAction == 'weed_treatment' then
-                    TriggerServerEvent('esx_drugs:startTransformWeed')
+                    TriggerServerEvent('esx_illegal_drugs:startTransformWeed')
                 end
                 if CurrentAction == 'weed_resell' then
-                    TriggerServerEvent('esx_drugs:startSellWeed')
+                    TriggerServerEvent('esx_illegal_drugs:startSellWeed')
                 end
                 if CurrentAction == 'opium_harvest' then
-                    TriggerServerEvent('esx_drugs:startHarvestOpium')
+                    TriggerServerEvent('esx_illegal_drugs:startHarvestOpium')
                 end
                 if CurrentAction == 'opium_treatment' then
-                    TriggerServerEvent('esx_drugs:startTransformOpium')
+                    TriggerServerEvent('esx_illegal_drugs:startTransformOpium')
                 end
                 if CurrentAction == 'opium_resell' then
-                    TriggerServerEvent('esx_drugs:startSellOpium')
+                    TriggerServerEvent('esx_illegal_drugs:startSellOpium')
                 end
                 CurrentAction = nil
             end
