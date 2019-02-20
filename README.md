@@ -1,14 +1,14 @@
 # esx_illegal_drugs
-This is the old esx_drugs which contain opium, weed, cocaine & meth.
-This was a fork from https://github.com/ESX-Org/esx_drugs but they changed the way they do drugs and they only use weed now.
-This is why this is not a fork.
+-This is the old esx_drugs which contain opium, weed, cocaine & meth.
+-This was a fork from https://github.com/ESX-Org/esx_drugs but they changed the way they do drugs and they only use weed now.
+-This is why this is not a fork.
 
-This version is modified to use FiveM IPL https://github.com/XxFri3ndlyxX/fivem-ipl
-You must use some tp scripts. Coord will be made available.
+-This version is modified to use FiveM IPL https://github.com/XxFri3ndlyxX/fivem-ipl
+-You must use some tp scripts. Coord will be made available.
 
-Installation
-Import esx_drugs.sql in your database
-Add this in your server.cfg:
+-**Installation**
+-Import esx_drugs.sql in your database
+-Add this in your server.cfg:
 ```start esx_drugs```
 
 Legal
