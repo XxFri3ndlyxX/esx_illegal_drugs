@@ -3,7 +3,9 @@ This is the old esx_drugs which contain opium, weed, cocaine & meth.
 This was a fork from [esx_drugs](https://github.com/ESX-Org/esx_drugs) but they changed the way they do drugs and they only use weed now.  
 This is why this is not a fork.  
 
-This version is modified to use [FiveMIPL](https://github.com/XxFri3ndlyxX/fivem-ipl)   
+**REQUIREMENTS**
+This version is modified to use [FiveMIPL](https://github.com/XxFri3ndlyxX/fivem-ipl)  
+You will also need [FiveMIPL](https://github.com/XxFri3ndlyxX/Teleport)  
 You must use some tp scripts. Coord will be made available.  
 
 **Installation**  
