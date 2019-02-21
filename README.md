@@ -9,7 +9,7 @@ You will also need [Teleport Script](https://github.com/XxFri3ndlyxX/Teleport)
 You must use some tp scripts. Coord will be made available.  
 
 **Installation**  
-Import esx_drugs.sql in your database  
+Import esx_illegal_drugs.sql in your database  
 Add this in your server.cfg:  
 ```start esx_illegal_drugs```   
 
