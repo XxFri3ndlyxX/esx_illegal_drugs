@@ -18,13 +18,13 @@ Keybind is C on keyboard or R3 on controller.
 Make sure your not a cop when attempting to gather/process/sell drugs.
 Make sure that you set the number of cop desired in the config file.
 
-**HOW THIS WORKS**
+**HOW THIS WORKS**  
 Go to Weed,meth,opium or coke farm.  
-Use the teleport script to get to the harvesting location.
-Start harvesting. (You can harvest up to 420 max, each 1 weed is = to 1G)
-Start processing the selected drug. 
-(This will remove 28G from your inventory and will add 1 bag which will contain 28G.  You can process 420G to get a max of 15 bag)    
-Now you can go and sell your drug.
+Use the teleport script to get to the harvesting location.  
+Start harvesting. (You can harvest up to 420 max, each 1 weed is = to 1G)  
+Start processing the selected drug.  
+(This will remove 28G from your inventory and will add 1 bag which will contain 28G.  You can process 420G to get a max of 15 bag)     
+Now you can go and sell your drug.    
 
 **TODO* Adding animation**     
 
@@ -32,7 +32,7 @@ Now you can go and sell your drug.
 <a href="https://imgur.com/hb3yEjZ"><img src="https://i.imgur.com/hb3yEjZ.jpg" title="source: imgur.com" /></a>
 <a href="https://imgur.com/kGKoSZS"><img src="https://i.imgur.com/kGKoSZS.jpg" title="source: imgur.com" /></a>
 <a href="https://imgur.com/NL90eRb"><img src="https://i.imgur.com/NL90eRb.jpg" title="source: imgur.com" /></a>
-<a href="https://imgur.com/AJ35TBN"><img src="https://i.imgur.com/AJ35TBN.jpg" title="source: imgur.com" /></a>  
+<a href="https://imgur.com/AJ35TBN"><img src="https://i.imgur.com/AJ35TBN.jpg" title="source: imgur.com" /></a>     
 **VIDEO**
 <a href="https://streamable.com/f6dcn"><img src="https://i.imgur.com/hb3yEjZ.jpg" title="source: imgur.com" /></a>        
         
