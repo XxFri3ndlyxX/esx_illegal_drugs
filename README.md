@@ -25,7 +25,8 @@ Make sure that you set the number of cop desired in the config file.
 <a href="https://imgur.com/kGKoSZS"><img src="https://i.imgur.com/kGKoSZS.jpg" title="source: imgur.com" /></a>
 <a href="https://imgur.com/NL90eRb"><img src="https://i.imgur.com/NL90eRb.jpg" title="source: imgur.com" /></a>
 <a href="https://imgur.com/AJ35TBN"><img src="https://i.imgur.com/AJ35TBN.jpg" title="source: imgur.com" /></a>  
-https://streamable.com/f6dcn        
+[![Watch the video](https://i.imgur.com/hb3yEjZ.jpg)](https://streamable.com/f6dcn)       
+        
 
 Legal
 License
