@@ -5,15 +5,18 @@ This is why this is not a fork.
 
 **REQUIREMENTS**
 This version is modified to use [FiveMIPL](https://github.com/XxFri3ndlyxX/fivem-ipl)  
-You will also need [Teleport Script](https://github.com/XxFri3ndlyxX/Teleport)  
-You must use some tp scripts. Coord will be made available.  
+You will also need [Teleport Script](https://github.com/XxFri3ndlyxX/Teleport)   
 
-**Installation**  
+**INSTALATION**  
+Put resource esx_illegal_drugs in your server 
 Import esx_illegal_drugs.sql in your database  
 Add this in your server.cfg:  
 ```start esx_illegal_drugs```   
 
-Keybind is C on keyboard or R3 on controller.   
+**CONFIGURATION**
+Keybind is C on keyboard or R3 on controller.  
+Make sure your not a cop when attempting to gather/process/sell drugs.
+Make sure that you set the number of cop desired in the config file.
 
 **TODO* Adding animation**     
 
@@ -21,7 +24,9 @@ Keybind is C on keyboard or R3 on controller.
 <a href="https://imgur.com/hb3yEjZ"><img src="https://i.imgur.com/hb3yEjZ.jpg" title="source: imgur.com" /></a>
 <a href="https://imgur.com/kGKoSZS"><img src="https://i.imgur.com/kGKoSZS.jpg" title="source: imgur.com" /></a>
 <a href="https://imgur.com/NL90eRb"><img src="https://i.imgur.com/NL90eRb.jpg" title="source: imgur.com" /></a>
-<a href="https://imgur.com/AJ35TBN"><img src="https://i.imgur.com/AJ35TBN.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/AJ35TBN"><img src="https://i.imgur.com/AJ35TBN.jpg" title="source: imgur.com" /></a>  
+https://streamable.com/f6dcn        
+
 Legal
 License
 
