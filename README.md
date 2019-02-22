@@ -6,6 +6,7 @@ This is why this is not a fork.
 **REQUIREMENTS**
 This version is modified to use [FiveMIPL](https://github.com/XxFri3ndlyxX/fivem-ipl)  
 You will also need [Teleport Script](https://github.com/XxFri3ndlyxX/Teleport)   
+You will also need the latest es_extended and esx_policejob.
 
 **INSTALATION**  
 Put resource esx_illegal_drugs in your server 
