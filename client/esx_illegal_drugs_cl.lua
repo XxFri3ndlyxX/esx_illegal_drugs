@@ -362,7 +362,7 @@ Citizen.CreateThread(function()
 			if IsControlJustReleased(0, 26) then
 				if CurrentAction == 'exitMarker' then
 					TriggerEvent('esx_illegal_drugs:hasExitedMarker', lastZone)
-					Citizen.Wait(15000)
+					Citizen.Wait(1000000)
 				elseif CurrentAction == 'CokeField' then
 					TriggerServerEvent('esx_illegal_drugs:startHarvestCoke')
 				elseif CurrentAction == 'CokeProcessing' then
