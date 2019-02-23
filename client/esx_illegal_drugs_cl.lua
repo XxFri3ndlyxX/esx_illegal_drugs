@@ -136,6 +136,7 @@ AddEventHandler('esx_illegal_drugs:hasEnteredMarker', function(zone)
 	end
 end)
 
+
 AddEventHandler('esx_illegal_drugs:hasExitedMarker', function(zone)
 	CurrentAction = nil
 	ESX.UI.Menu.CloseAll()
@@ -153,6 +154,7 @@ AddEventHandler('esx_illegal_drugs:hasExitedMarker', function(zone)
 	TriggerServerEvent('esx_illegal_drugs:stopTransformOpium')
 	TriggerServerEvent('esx_illegal_drugs:stopSellOpium')
 end)
+
 
 -- Weed Effect
 RegisterNetEvent('esx_illegal_drugs:onPot')
@@ -362,7 +364,7 @@ Citizen.CreateThread(function()
 			if IsControlJustReleased(0, 26) then
 				if CurrentAction == 'exitMarker' then
 					TriggerEvent('esx_illegal_drugs:hasExitedMarker', lastZone)
-					Citizen.Wait(1000000)
+					Citizen.Wait(1000)
 				elseif CurrentAction == 'CokeField' then
 					TriggerServerEvent('esx_illegal_drugs:startHarvestCoke')
 				elseif CurrentAction == 'CokeProcessing' then
@@ -377,8 +379,10 @@ Citizen.CreateThread(function()
 					TriggerServerEvent('esx_illegal_drugs:startSellMeth')
 				elseif CurrentAction == 'WeedField' then
 					TriggerServerEvent('esx_illegal_drugs:startHarvestWeed')
+					TriggerEvent('esx_illegal_drugs:HarvestWeedAnimation')
 				elseif CurrentAction == 'WeedProcessing' then
 					TriggerServerEvent('esx_illegal_drugs:startTransformWeed')
+					TriggerEvent('esx_illegal_drugs:TransformWeedAnimation')
 				elseif CurrentAction == 'WeedDealer' then
 					TriggerServerEvent('esx_illegal_drugs:startSellWeed')
 				elseif CurrentAction == 'OpiumField' then
@@ -395,7 +399,38 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+		local ped = GetPlayerPed( -1 )
+			if IsControlJustPressed(0, 32) or IsControlJustPressed(0, 33) then
+			ClearPedTasks(ped)
+				TriggerServerEvent('esx_illegal_drugs:stopHarvestCoke')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformCoke')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellCoke')
+	            TriggerServerEvent('esx_illegal_drugs:stopHarvestMeth')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformMeth')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellMeth')
+	            TriggerServerEvent('esx_illegal_drugs:stopHarvestWeed')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformWeed')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellWeed')
+	            TriggerServerEvent('esx_illegal_drugs:stopHarvestOpium')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformOpium')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellOpium')
+		end
+	end
+end)
 
+-- Weed Animation
+RegisterNetEvent('esx_illegal_drugs:HarvestWeedAnimation')
+AddEventHandler('esx_illegal_drugs:HarvestWeedAnimation', function()
+TaskStartScenarioInPlace(GetPlayerPed(-1), "prop_human_parking_meter", 0, true)
+end)
+
+RegisterNetEvent('esx_illegal_drugs:TransformWeedAnimation')
+AddEventHandler('esx_illegal_drugs:TransformWeedAnimation', function()
+TaskStartScenarioInPlace(GetPlayerPed(-1), "prop_human_bum_bin", 0, true)
+end)
 
 -- Disable Controls
 Citizen.CreateThread(function()
