@@ -136,6 +136,7 @@ AddEventHandler('esx_illegal_drugs:hasEnteredMarker', function(zone)
 	end
 end)
 
+
 AddEventHandler('esx_illegal_drugs:hasExitedMarker', function(zone)
 	CurrentAction = nil
 	ESX.UI.Menu.CloseAll()
@@ -153,6 +154,7 @@ AddEventHandler('esx_illegal_drugs:hasExitedMarker', function(zone)
 	TriggerServerEvent('esx_illegal_drugs:stopTransformOpium')
 	TriggerServerEvent('esx_illegal_drugs:stopSellOpium')
 end)
+
 
 -- Weed Effect
 RegisterNetEvent('esx_illegal_drugs:onPot')
@@ -362,7 +364,7 @@ Citizen.CreateThread(function()
 			if IsControlJustReleased(0, 26) then
 				if CurrentAction == 'exitMarker' then
 					TriggerEvent('esx_illegal_drugs:hasExitedMarker', lastZone)
-					Citizen.Wait(15000)
+					Citizen.Wait(1000)
 				elseif CurrentAction == 'CokeField' then
 					TriggerServerEvent('esx_illegal_drugs:startHarvestCoke')
 				elseif CurrentAction == 'CokeProcessing' then
@@ -377,10 +379,13 @@ Citizen.CreateThread(function()
 					TriggerServerEvent('esx_illegal_drugs:startSellMeth')
 				elseif CurrentAction == 'WeedField' then
 					TriggerServerEvent('esx_illegal_drugs:startHarvestWeed')
+					TriggerEvent('esx_illegal_drugs:HarvestWeedAnimation')
 				elseif CurrentAction == 'WeedProcessing' then
 					TriggerServerEvent('esx_illegal_drugs:startTransformWeed')
+					TriggerEvent('esx_illegal_drugs:TransformWeedAnimation')
 				elseif CurrentAction == 'WeedDealer' then
 					TriggerServerEvent('esx_illegal_drugs:startSellWeed')
+					TriggerEvent('esx_illegal_drugs:SellWeedAnimation')
 				elseif CurrentAction == 'OpiumField' then
 					TriggerServerEvent('esx_illegal_drugs:startHarvestOpium')
 				elseif CurrentAction == 'OpiumProcessing' then
@@ -395,6 +400,130 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+
+
+----------------------------------------------------------
+--------------------STOP HARVEST/TRANSFORM/SELL-----------
+----------------------------------------------------------
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+		local ped = GetPlayerPed( -1 )
+			if IsControlJustPressed(0, 32) or IsControlJustPressed(0, 33) then
+			    TriggerServerEvent('esx_illegal_drugs:stopHarvestWeed')
+				TriggerServerEvent('esx_illegal_drugs:stopTransformWeed')
+				TriggerServerEvent('esx_illegal_drugs:stopSellWeed')
+				TriggerServerEvent('esx_illegal_drugs:stopHarvestCoke')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformCoke')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellCoke')
+	            TriggerServerEvent('esx_illegal_drugs:stopHarvestMeth')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformMeth')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellMeth')    
+	            TriggerServerEvent('esx_illegal_drugs:stopHarvestOpium')
+	            TriggerServerEvent('esx_illegal_drugs:stopTransformOpium')
+	            TriggerServerEvent('esx_illegal_drugs:stopSellOpium')
+		end
+	end
+end)
+----------------------------------------------------------
+--------------------STOP HARVEST/TRANSFORM/SELL-----------
+----------------------------------------------------------
+
+----------------------------------------------------------
+--------------------HARVEST WEED ANIMATION----------------
+----------------------------------------------------------
+RegisterNetEvent('esx_illegal_drugs:HarvestWeedAnimation')
+AddEventHandler('esx_illegal_drugs:HarvestWeedAnimation', function()
+    local ped = GetPlayerPed(-1)
+	local x,y,z = table.unpack(GetEntityCoords(playerPed, true))
+    if not IsEntityPlayingAnim(ped, "anim@amb@business@weed@weed_inspecting_lo_med_hi@", "weed_stand_checkingleaves_kneeling_01_inspector", 3) then
+        RequestAnimDict("anim@amb@business@weed@weed_inspecting_lo_med_hi@")
+        while not HasAnimDictLoaded("anim@amb@business@weed@weed_inspecting_lo_med_hi@") do
+            Citizen.Wait(100)
+        end
+		SetEntityCoords(PlayerPedId(), 1057.54, -3197.39, -40.14)
+        SetEntityHeading(PlayerPedId(), 171.5)
+        Wait(100)
+        TaskPlayAnim(ped, "anim@amb@business@weed@weed_inspecting_lo_med_hi@", "weed_stand_checkingleaves_kneeling_01_inspector", 8.0, -8, -1, 49, 0, 0, 0, 0)
+        Wait(2000)
+        while IsEntityPlayingAnim(ped, "anim@amb@business@weed@weed_inspecting_lo_med_hi@", "weed_stand_checkingleaves_kneeling_01_inspector", 3) do
+            Wait(1)
+            if (IsControlPressed(0, 32) or IsControlPressed(0, 33) or IsControlPressed(0, 34) or IsControlPressed(0, 35)) then
+                ClearPedTasksImmediately(ped)
+                break
+            end
+        end
+    end
+end)
+----------------------------------------------------------
+--------------------HARVEST WEED ANIMATION----------------
+----------------------------------------------------------
+
+
+----------------------------------------------------------
+--------------------TRANSFORM WEED ANIMATION--------------
+----------------------------------------------------------
+RegisterNetEvent('esx_illegal_drugs:TransformWeedAnimation')
+AddEventHandler('esx_illegal_drugs:TransformWeedAnimation', function()
+    local ped = GetPlayerPed(-1)
+	local x,y,z = table.unpack(GetEntityCoords(playerPed, true))
+    if not IsEntityPlayingAnim(ped, "anim@amb@business@weed@weed_sorting_seated@", "sorter_right_sort_v3_sorter02", 3) then
+        RequestAnimDict("anim@amb@business@weed@weed_sorting_seated@")
+        while not HasAnimDictLoaded("anim@amb@business@weed@weed_sorting_seated@") do
+            Citizen.Wait(100)
+        end
+		SetEntityCoords(PlayerPedId(), 1037.53, -3205.37, -39.18)
+        SetEntityHeading(PlayerPedId(), 269.5)
+        Wait(100)
+        ----TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_SEAT_CHAIR", 0, false) ---Does not work
+        TaskPlayAnim(ped, "anim@amb@business@weed@weed_sorting_seated@", "sorter_right_sort_v3_sorter02", 8.0, -8, -1, 49, 0, 0, 0, 0)
+        Wait(2000)
+        while IsEntityPlayingAnim(ped, "anim@amb@business@weed@weed_sorting_seated@", "sorter_right_sort_v3_sorter02", 3) do
+            Wait(1)
+            if (IsControlPressed(0, 32) or IsControlPressed(0, 33) or IsControlPressed(0, 34) or IsControlPressed(0, 35)) then
+                ClearPedTasksImmediately(ped)
+                break
+            end
+        end
+    end
+end)
+----------------------------------------------------------
+--------------------TRANSFORM WEED ANIMATION--------------
+----------------------------------------------------------
+
+
+
+----------------------------------------------------------
+--------------------SELL WEED ANIMATION-------------------
+----------------------------------------------------------
+--[[RegisterNetEvent('esx_illegal_drugs:SellWeedAnimation')
+AddEventHandler('esx_illegal_drugs:SellWeedAnimation', function()
+    local ped = GetPlayerPed(-1)
+	local x,y,z = table.unpack(GetEntityCoords(playerPed, true))
+    if not IsEntityPlayingAnim(ped, "anim@heists@biolab@ig_1_karen_codes", "handover_cam", 3) then
+        RequestAnimDict("anim@heists@money_grab@briefcase")
+        while not HasAnimDictLoaded("anim@heists@money_grab@briefcase") do
+            Citizen.Wait(100)
+        end
+		--SetEntityCoords(PlayerPedId(), 1037.53, -3205.37, -39.18)
+        --SetEntityHeading(PlayerPedId(), 269.5)
+        --Wait(100)
+        ----TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_SEAT_CHAIR", 0, false) ---Does not work
+        TaskPlayAnim(ped, "anim@heists@money_grab@briefcase", "handover_cam", 8.0, -8, -1, 49, 0, 0, 0, 0)
+        Wait(2000)
+        while IsEntityPlayingAnim(ped, "anim@heists@money_grab@briefcase", "handover_cam", 3) do
+            Wait(1)
+            if (IsControlPressed(0, 32) or IsControlPressed(0, 33) or IsControlPressed(0, 34) or IsControlPressed(0, 35)) then
+                ClearPedTasksImmediately(ped)
+                break
+            end
+        end
+    end
+end)]]--
+----------------------------------------------------------
+--------------------SELL WEED ANIMATION-------------------
+----------------------------------------------------------
 
 
 -- Disable Controls
