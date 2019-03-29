@@ -42,6 +42,7 @@ Config.Zones = {
 	OpiumDealer =		{x=-3155.608, y=1125.368,   z=20.858}
 }
 
+Config.DisableBlip = true
 Config.Map = {
   {name="Coke Farm Entrance",    color=4, scale=0.8, id=501, x=47.842,     y=3701.961,   z=40.722},
   {name="Coke Farm",             color=4, scale=0.8, id=501, x=1093.139,   y=-3195.673,  z=-39.131},
