@@ -287,7 +287,7 @@ end)
 
 -- Create Blips
 Citizen.CreateThread(function()
-	
+	if Config.DisableBlip == false then
 	for i=1, #Config.Map, 1 do
 		
 		local blip = AddBlipForCoord(Config.Map[i].x, Config.Map[i].y, Config.Map[i].z)
@@ -301,7 +301,7 @@ Citizen.CreateThread(function()
 		AddTextComponentString(Config.Map[i].name)
 		EndTextCommandSetBlipName(blip)
 	end
-
+    end
 end)
 
 -- RETURN NUMBER OF ITEMS FROM SERVER
