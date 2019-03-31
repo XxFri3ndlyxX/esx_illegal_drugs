@@ -164,7 +164,7 @@ AddEventHandler('esx_illegal_drugs:onPot', function()
 		Citizen.Wait(0)
 	end
 	TaskStartScenarioInPlace(GetPlayerPed(-1), "WORLD_HUMAN_SMOKING_POT", 0, true)
-	Citizen.Wait(50000)
+	Citizen.Wait(10000)
 	DoScreenFadeOut(1000)
 	Citizen.Wait(1000)
 	ClearPedTasksImmediately(GetPlayerPed(-1))
@@ -192,7 +192,7 @@ AddEventHandler('esx_illegal_drugs:onOpium', function()
 		Citizen.Wait(0)
 	end
 	TaskStartScenarioInPlace(GetPlayerPed(-1), "WORLD_HUMAN_SMOKING_POT", 0, true)
-	Citizen.Wait(50000)
+	Citizen.Wait(10000)
 	DoScreenFadeOut(1000)
 	Citizen.Wait(1000)
 	ClearPedTasksImmediately(GetPlayerPed(-1))
@@ -220,7 +220,7 @@ AddEventHandler('esx_illegal_drugs:onMeth', function()
 		Citizen.Wait(0)
 	end
 	TaskStartScenarioInPlace(GetPlayerPed(-1), "mp_player_intdrink", 0, true)
-	Citizen.Wait(50000)
+	Citizen.Wait(10000)
 	DoScreenFadeOut(1000)
 	Citizen.Wait(1000)
 	ClearPedTasksImmediately(GetPlayerPed(-1))
@@ -248,7 +248,7 @@ AddEventHandler('esx_illegal_drugs:onCoke', function()
 		Citizen.Wait(0)
 	end
 	TaskStartScenarioInPlace(GetPlayerPed(-1), "WORLD_HUMAN_SMOKING_POT", 0, true)
-	Citizen.Wait(50000)
+	Citizen.Wait(10000)
 	DoScreenFadeOut(1000)
 	Citizen.Wait(1000)
 	ClearPedTasksImmediately(GetPlayerPed(-1))
@@ -301,7 +301,7 @@ Citizen.CreateThread(function()
 		AddTextComponentString(Config.Map[i].name)
 		EndTextCommandSetBlipName(blip)
 	end
-    end
+  end
 end)
 
 -- RETURN NUMBER OF ITEMS FROM SERVER
