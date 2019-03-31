@@ -44,6 +44,7 @@ Config.Zones = {
 
 Config.DisableBlip = true
 Config.Map = {
+
   {name="Coke Farm Entrance",    color=4, scale=0.8, id=501, x=47.842,     y=3701.961,   z=40.722},
   {name="Coke Farm",             color=4, scale=0.8, id=501, x=1093.139,   y=-3195.673,  z=-39.131},
   {name="Coke Processing",       color=4, scale=0.8, id=501, x=1101.837,   y=-3193.732,  z=-38.993},
@@ -60,4 +61,5 @@ Config.Map = {
   {name="Weed Farm",             color=2, scale=0.8, id=140, x=2221.858,   y=5614.81,    z=54.902},
   {name="Weed Processing",       color=2, scale=0.8, id=140, x=1037.527,   y=-3205.368,  z=-38.17},
   {name="Weed Sales",            color=3, scale=0.8, id=140, x=85.58,      y=-1959.34,   z=20.13}
+
 }
