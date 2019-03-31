@@ -36,4 +36,6 @@ Locales['en'] = {
 	['no_pouches_coke_sale'] = 'You do not have any bag of coke(28G) to sell',
 	['no_pouches_meth_sale'] = 'You do not have any bag of meth(28G) to sell',
 	['no_pouches_opium_sale'] = 'You do not have any bag of meth(28G) to sell',
+	['controls_cooldown'] = 'You must wait 5 minutes before you can do this again.',
+	
 }
