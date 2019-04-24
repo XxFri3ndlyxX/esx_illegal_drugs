@@ -14,6 +14,39 @@ Put resource esx_illegal_drugs in your server
 Import esx_illegal_drugs.sql in your database  
 Add this in your server.cfg:  
 ```start esx_illegal_drugs```   
+If your getting errors, It's most likely that you have your start order wrong. 
+This is an example of a fresh server with all their dependency with the correct order. Make sure yours look similiar to that
+```
+### [ESSENTIALS] ###
+start mysql-async
+start essentialmode
+start esplugin_mysql
+start es_extended
+start async
+start es_ui
+start es_admin2
+start esx_kashacters
+start esx_identity
+start skinchanger
+start esx_skin
+start instance
+start esx_datastore
+start esx_addonaccount
+start esx_addoninventory
+start cron
+start esx_menu_default
+start esx_menu_list
+start esx_menu_dialog
+start esx_license
+start esx_billing
+start esx_society
+start esx_policejob
+start esx_ambulancejob
+start esx_vehicleshop
+start esx_illegal_drugs
+start fivem-ipl
+start Teleport
+```
 
 **CONFIGURATION**
 Keybind is C on keyboard or R3 on controller.  
