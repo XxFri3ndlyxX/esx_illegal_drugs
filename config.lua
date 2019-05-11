@@ -57,8 +57,8 @@ Config.Map = {
   {name="Opium Farm",            color=6, scale=0.8, id=403, x=2433.804,   y=4969.196,   z=42.348},
   {name="Opium Processing",      color=6, scale=0.8, id=403, x=2434.43,    y=4964.18,    z=42.348},
   {name="Opium Sales",           color=3, scale=0.8, id=403, x=-3155.608,  y=1125.368,   z=20.858},
-  {name="Weed Farm Entrance",    color=2, scale=0.8, id=140, x=1057.448,   y=-3197.646,  z=-39.138},
-  {name="Weed Farm",             color=2, scale=0.8, id=140, x=2221.858,   y=5614.81,    z=54.902},
+  {name="Weed Farm Entrance",    color=2, scale=0.8, id=140, x=2221.858,   y=5614.81,    z=54.902},
+  {name="Weed Farm",             color=2, scale=0.8, id=140, x=1057.448,   y=-3197.646,  z=-39.138},
   {name="Weed Processing",       color=2, scale=0.8, id=140, x=1037.527,   y=-3205.368,  z=-38.17},
   {name="Weed Sales",            color=3, scale=0.8, id=140, x=85.58,      y=-1959.34,   z=20.13}
 
