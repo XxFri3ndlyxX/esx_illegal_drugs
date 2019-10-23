@@ -162,7 +162,7 @@ local function SellWeed(source)
 					xPlayer.showNotification(_U('sold_one_weed'))
                 elseif CopsConnected >= 10 then
 					xPlayer.addAccountMoney('black_money', 1900)
-					xPlayer.showNotification(xPlayer.showNotification(_U('sold_one_weed'))					
+					xPlayer.showNotification(_U('sold_one_weed'))			
 				end
 				
 				SellWeed(source)
