@@ -39,7 +39,7 @@ local function HarvestWeed(source)
 		if PlayersHarvestingWeed[source] == true then
 			local weed = xPlayer.getInventoryItem('weed')
 
-			if not xPlayer.canCarryItem('weed', weed.count) then
+			if not xPlayer.canCarryItem('weed', weed.weight) then
 				xPlayer.showNotification(_U('inv_full_weed'))
 			else
 				xPlayer.addInventoryItem('weed', 1)
@@ -203,7 +203,7 @@ local function HarvestOpium(source)
 		if PlayersHarvestingOpium[source] == true then
 			local opium = xPlayer.getInventoryItem('opium')
 
-			if not xPlayer.canCarryItem('opium', opium.count) then
+			if not xPlayer.canCarryItem('opium', opium.weight) then
 				xPlayer.showNotification(_U('inv_full_opium'))
 			else
 				xPlayer.addInventoryItem('opium', 1)
@@ -366,7 +366,7 @@ local function HarvestCoke(source)
 		if PlayersHarvestingCoke[source] == true then
 			local coke = xPlayer.getInventoryItem('coke')
 
-			if not xPlayer.canCarryItem('coke', coke.count) then
+			if not xPlayer.canCarryItem('coke', coke.weight) then
 				xPlayer.showNotification(_U('inv_full_coke'))
 			else
 				xPlayer.addInventoryItem('coke', 1)
@@ -529,7 +529,7 @@ local function HarvestMeth(source)
 		if PlayersHarvestingMeth[source] == true then
 			local meth = xPlayer.getInventoryItem('meth')
 
-			if not xPlayer.canCarryItem('meth', meth.count) then
+			if not xPlayer.canCarryItem('meth', meth.weight) then
 				xPlayer.showNotification(_U('inv_full_meth'))
 			else
 				xPlayer.addInventoryItem('meth', 1)
@@ -642,16 +642,16 @@ local function SellMeth(source)
 					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 7 then
 					xPlayer.addAccountMoney('black_money', 4600)
-					xPlayer.showNotification(_U('sold_one_coke'))
+					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 8 then
 					xPlayer.addAccountMoney('black_money', 4700)
-					xPlayer.showNotification(_U('sold_one_coke'))
+					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 9 then
 					xPlayer.addAccountMoney('black_money', 4800)
-					xPlayer.showNotification(_U('sold_one_coke'))
+					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 10 then
 					xPlayer.addAccountMoney('black_money', 4900)
-					xPlayer.showNotification(_U('sold_one_coke'))	
+					xPlayer.showNotification(_U('sold_one_meth'))	
 				end
 				
 				SellMeth(source)
