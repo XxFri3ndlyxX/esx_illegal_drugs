@@ -642,16 +642,16 @@ local function SellMeth(source)
 					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 7 then
 					xPlayer.addAccountMoney('black_money', 4600)
-					xPlayer.showNotification(_U('sold_one_coke'))
+					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 8 then
 					xPlayer.addAccountMoney('black_money', 4700)
-					xPlayer.showNotification(_U('sold_one_coke'))
+					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 9 then
 					xPlayer.addAccountMoney('black_money', 4800)
-					xPlayer.showNotification(_U('sold_one_coke'))
+					xPlayer.showNotification(_U('sold_one_meth'))
                 elseif CopsConnected >= 10 then
 					xPlayer.addAccountMoney('black_money', 4900)
-					xPlayer.showNotification(_U('sold_one_coke'))	
+					xPlayer.showNotification(_U('sold_one_meth'))	
 				end
 				
 				SellMeth(source)
