@@ -4,7 +4,7 @@ This was a fork from [esx_drugs](https://github.com/ESX-Org/esx_drugs) but they 
 This is why this is not a fork.  
 
 **REQUIREMENTS**
-This version is modified to use [FiveMIPL](https://github.com/XxFri3ndlyxX/fivem-ipl)  
+This version is modified to use [FiveMIPL](https://github.com/esx-community/fivem-ipl)  
 You will also need [Teleport Script](https://github.com/XxFri3ndlyxX/Teleport)   
 You will also need the latest [esx_policejob](https://github.com/ESX-Org/esx_policejob)  &  latest [es_extended](https://github.com/ESX-Org/es_extended)         
 
